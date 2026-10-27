@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Klober App — One Memory. Every Model.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="clover" viewBox="0 0 100 100"><g stroke="#1b1830" stroke-width="4" stroke-linejoin="round">
+<path d="M50 48C40 22 14 26 18 44 8 50 20 70 48 50Z" fill="#ecb23a"/>
+<path d="M52 48C60 22 86 26 82 44 92 50 80 70 52 50Z" fill="#6fbf52"/>
+<path d="M48 52C22 60 26 86 44 82 50 92 70 80 50 52Z" fill="#a394ea"/>
+<path d="M52 52C78 60 74 86 56 82 50 92 30 80 50 52Z" fill="#45b8a7"/></g><circle cx="50" cy="50" r="6" fill="#1c8a4a" stroke="#1b1830" stroke-width="3"/></symbol>
+<symbol id="i-claude" viewBox="0 0 24 24"><path fill="#d97757" d="M4.7 15.9l4.7-2.6.1-.2-.1-.2h-.2l-.8-.1-2.7-.1-2.3-.1-2.3-.1-.6-.1L0 11.7l.1-.4.5-.3.7.1 1.5.1 2.3.2 1.7.1 2.5.3h.4l.1-.2-.1-.1-.1-.1-2.4-1.6-2.6-1.7-1.4-1-.7-.5-.4-.5-.2-1 .7-.7.9.1.2.1.9.7 1.9 1.5 2.5 1.8.4.3.1-.1v-.1l-.2-.3-1.3-2.5-1.5-2.5-.6-1-.2-.6c-.1-.3-.1-.5-.1-.7l.7-1 .4-.1 1 .1.4.4.6 1.4 1 2.2 1.5 3 .5.9.2.8.1.3h.1V9l.1-2 .3-2.4.1-.7.4-.8.7-.5.6.3.5.7-.1.4-.3 1.9-.6 3-.4 2.1h.2l.3-.3 1.2-1.5 2-2.5.9-1 1-1.1.7-.5h1.2l.9 1.3-.4 1.4-1.3 1.6-1 1.4-1.5 2-.9 1.6.1.1h.2l3.4-.7 1.8-.3 2.2-.4 1 .5.1.5-.4 1-2.4.6-2.8.6-4.2 1v.1l1.9.2.8.1h2l3.7.3 1 .6.6.8-.1.6-1.5.8-2-.5-4.7-1.1-1.6-.4h-.2v.1l1.4 1.3 2.5 2.2 3.1 2.9.2.7-.4.6-.4-.1-2.8-2.1-1.1-.9-2.4-2h-.2v.2l.6.8 2.9 4.4.2 1.4-.2.4-.8.3-.8-.2-1.8-2.5-1.8-2.8-1.5-2.5-.2.1-.9 9.4-.4.5-.9.4-.8-.6-.4-1 .4-1.9.5-2.4.4-1.9.4-2.4.2-.8v-.1h-.2l-1.8 2.5-2.8 3.7-2.2 2.4-.5.2-.9-.5.1-.9.5-.7 3-3.8 1.8-2.4 1.2-1.4v-.2h-.1L4.3 18.5l-1.4.2-.6-.6.1-.9.3-.3 2.4-1.6z"/></symbol>
+<symbol id="i-gpt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.3 9.8a6 6 0 0 0-.5-4.9 6 6 0 0 0-6.5-2.9A6 6 0 0 0 4.9 4.2a6 6 0 0 0-4 2.9 6 6 0 0 0 .7 7 6 6 0 0 0 .5 4.9 6 6 0 0 0 6.5 2.9 6 6 0 0 0 4.5 2 6 6 0 0 0 5.7-4.2 6 6 0 0 0 4-2.9 6 6 0 0 0-.7-7zm-9 12.6a4.5 4.5 0 0 1-2.9-1l.1-.1 4.8-2.8a.8.8 0 0 0 .4-.7v-6.7l2 1.2v5.6a4.5 4.5 0 0 1-4.4 4.5zm-9.7-4.1a4.5 4.5 0 0 1-.5-3l.1.1 4.8 2.8a.8.8 0 0 0 .8 0l5.8-3.4v2.3l-4.9 2.8a4.5 4.5 0 0 1-6.1-1.6zM2.3 7.9a4.5 4.5 0 0 1 2.4-2v5.7a.8.8 0 0 0 .4.7l5.8 3.4-2 1.2-4.8-2.8a4.5 4.5 0 0 1-1.8-6.2zm16.6 3.9-5.8-3.4 2-1.2 4.8 2.8a4.5 4.5 0 0 1-.7 8.1v-5.6a.8.8 0 0 0-.4-.7zm2-3-.1-.1-4.8-2.8a.8.8 0 0 0-.8 0L9.4 9.3V7l4.9-2.8a4.5 4.5 0 0 1 6.6 4.6zM8.3 12.9l-2-1.2V6.1a4.5 4.5 0 0 1 7.4-3.4l-.1.1-4.8 2.8a.8.8 0 0 0-.4.7zm1.1-2.4L12 9l2.6 1.5v3L12 15l-2.6-1.5z"/></symbol>
+<symbol id="i-gemini" viewBox="0 0 24 24"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8bf9"/><stop offset=".5" stop-color="#9b72cb"/><stop offset="1" stop-color="#d96570"/></linearGradient></defs><path fill="url(#gg)" d="M12 24A14.3 14.3 0 0 0 0 12 14.3 14.3 0 0 0 12 0a14.3 14.3 0 0 0 12 12 14.3 14.3 0 0 0-12 12z"/></symbol>
+<symbol id="i-grok" viewBox="0 0 24 24"><path fill="currentColor" d="M9.3 15.3 17.2 9.4c.4-.3.9-.2 1.1.3 1 2.4.5 5.2-1.4 7.2-2 2-4.7 2.4-7.2 1.4l-2.7 1.3c3.9 2.6 8.6 2 11.6-1 2.4-2.4 3.1-5.6 2.4-8.5-1-4.2.3-5.9 2.8-9.4l.2-.3-3.3 3.3v0L9.3 15.3zM7.6 16.7c-2.8-2.7-2.3-6.9.1-9.3 1.7-1.7 4.6-2.5 7.1-1.4l2.7-1.3a8.4 8.4 0 0 0-11.5 1C3.6 8.1 3 12.8 5.4 16.1L0 21.8l.1.1 7.5-5.2z"/></symbol>
+</defs></svg>
+<style>
+:root{--bg:#f4f2e4;--dot:#d9d4b8;--card:#fff;--card2:#faf8ee;--ink:#1b1830;--line:#1b1830;--sh:0 4px 0 #1b1830;--moss:#1c8a4a;--leaf:#7fd05a;--gold:#f6c744;--brass:#a3731a;--night:#2a2160;--mut:#6b6650;--txt:#1b1830}
+[data-theme=dark]{--bg:#0b0a10;--dot:#1d1a29;--card:#13111c;--card2:#1b1828;--line:rgba(127,208,90,.28);--sh:0 0 0 1px rgba(127,208,90,.12),0 8px 24px rgba(0,0,0,.5);--txt:#f4f2e4;--mut:#9a95ad;--ink:#f4f2e4;--night:#7fd05a}
+*{box-sizing:border-box;margin:0}body{font:14px/1.45 'Instrument Sans',sans-serif;color:var(--txt);background:var(--bg) radial-gradient(var(--dot) 1.2px,transparent 1.3px) 0 0/18px 18px;height:100vh;overflow:hidden}
+.app{display:grid;grid-template-columns:280px 1fr 320px;height:100vh}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:600}.disp{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+aside,.right{background:var(--card2);border-right:2px solid var(--line);display:flex;flex-direction:column;padding:14px;gap:10px;overflow:auto}.right{border-right:0;border-left:2px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px}.brand svg{width:34px;height:34px}.brand b{font:900 26px 'Big Shoulders Display';letter-spacing:.04em}
+.pill{font:600 10px 'JetBrains Mono';border:1.5px solid var(--line);border-radius:99px;padding:2px 7px;background:var(--card)}
+.gold{background:var(--gold);color:#1b1830;border:2px solid #1b1830;border-radius:12px;box-shadow:0 4px 0 var(--brass);font-weight:700;padding:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;font-size:14px}
+.gold:active{transform:translateY(3px);box-shadow:0 1px 0 var(--brass)}
+.btn{background:var(--card);color:var(--txt);border:2px solid var(--line);border-radius:10px;padding:6px 10px;cursor:pointer;font:600 12px 'Instrument Sans';box-shadow:var(--sh);display:inline-flex;gap:6px;align-items:center}
+.search{border:2px solid var(--line);border-radius:10px;background:var(--card);padding:8px 10px;display:flex;justify-content:space-between;color:var(--mut);font-size:13px}
+.nav div{padding:7px 10px;border-radius:9px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between}.nav .on{background:var(--moss);color:#fff;border:2px solid #1b1830}
+h6{font:700 11px 'JetBrains Mono';color:var(--mut);letter-spacing:.08em;margin-top:6px}
+.th{padding:8px 10px;border-radius:10px;border:2px solid transparent;cursor:pointer}.th.on{background:var(--card);border-color:var(--line);box-shadow:var(--sh)}.th p{font-weight:600;font-size:13px}.th .lg{display:flex;gap:3px;margin-top:4px;align-items:center;font-size:11px;color:var(--mut)}
+svg.ic{width:16px;height:16px;flex:none}.lg svg{width:13px;height:13px}
+.dock{margin-top:auto;border:2px solid var(--line);border-radius:12px;background:var(--card);padding:10px;box-shadow:var(--sh)}.eng{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;padding:2px 0}.dotg{width:7px;height:7px;border-radius:50%;background:#3fd16b;box-shadow:0 0 6px #3fd16b;margin-left:auto}
+.prof{display:flex;gap:8px;align-items:center;margin-top:8px;border-top:1.5px dashed var(--line);padding-top:8px}.av{width:30px;height:30px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font-weight:700;border:2px solid #1b1830}
+main{display:flex;flex-direction:column;min-width:0;position:relative}
+.top{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:2px solid var(--line);background:var(--card2);flex-wrap:wrap}
+.top h1{font:800 20px 'Big Shoulders Display';text-transform:uppercase;margin-right:auto}
+.sw{display:flex;border:2px solid var(--line);border-radius:99px;padding:2px;background:var(--card)}.sw button{border:0;background:none;color:var(--txt);border-radius:99px;padding:4px 9px;font:600 12px 'Instrument Sans';display:flex;gap:4px;align-items:center;cursor:pointer}.sw button.on{background:var(--ink);color:var(--bg)}
+.badge{font:600 10.5px 'JetBrains Mono';background:var(--leaf);color:#1b1830;border:2px solid #1b1830;border-radius:8px;padding:3px 7px}
+.feed{flex:1;overflow:auto;padding:18px 28px 170px;display:flex;flex-direction:column;gap:14px}
+.u{align-self:flex-end;background:var(--night);color:#fff;border-radius:16px 16px 4px 16px;padding:10px 14px;max-width:70%;border:2px solid #1b1830}[data-theme=dark] .u{background:#2a2160;border-color:var(--line)}
+.m{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--sh);max-width:92%}.m .who{display:flex;gap:7px;align-items:center;font-weight:700;margin-bottom:6px}
+pre{font:500 11.5px/1.5 'JetBrains Mono';background:#1b1830;color:#d8f5c4;border-radius:10px;padding:10px;margin-top:8px;overflow:auto}
+.tag{display:inline-block;margin-top:8px;font:700 10px 'JetBrains Mono';color:var(--moss);border:1.5px dashed var(--moss);border-radius:6px;padding:2px 6px}[data-theme=dark] .tag{color:var(--leaf);border-color:var(--leaf)}
+.hand{background:linear-gradient(180deg,#ffd866,#f6c744);color:#1b1830;border:2px solid #1b1830;box-shadow:0 4px 0 var(--brass);border-radius:12px;padding:9px 14px;font:700 11.5px 'JetBrains Mono';text-align:center}.hand small{display:block;font:500 11px 'Instrument Sans'}
+table{border-collapse:collapse;width:100%;margin-top:8px;font-size:12px}td,th{border:1.5px solid var(--line);padding:4px 7px;text-align:left}th{background:var(--card2)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}.split>div{border:1.5px solid var(--line);border-radius:10px;padding:9px;background:var(--card2);font-size:12.5px}
+.comp{position:absolute;left:24px;right:24px;bottom:16px;background:var(--card);border:2px solid var(--line);border-radius:18px;box-shadow:0 6px 0 var(--line);padding:10px 12px}[data-theme=dark] .comp{box-shadow:0 0 30px rgba(127,208,90,.15)}
+.comp input{width:100%;border:0;background:none;font:500 15px 'Instrument Sans';color:var(--txt);outline:0;padding:6px 2px}
+.crow{display:flex;gap:6px;align-items:center}.send{margin-left:auto;background:var(--moss);color:#fff;border:2px solid #1b1830;box-shadow:0 3px 0 #0d4a26;border-radius:10px;padding:7px 14px;font-weight:700;cursor:pointer}
+.chips{display:flex;gap:6px;margin-bottom:6px}.chip{font-size:11.5px;border:1.5px dashed var(--line);border-radius:99px;padding:3px 9px;cursor:pointer;color:var(--mut)}
+.hero{display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px}.hero svg.big{width:92px;height:92px;animation:fl 4s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px) rotate(8deg)}}
+.hero h2{font:900 64px/1 'Big Shoulders Display';text-transform:uppercase}.hero .omni{width:640px;border:2px solid var(--line);background:var(--card);border-radius:22px;padding:18px;box-shadow:0 6px 0 var(--line);font-size:16px;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(4,150px);gap:10px}.cards div{border:2px solid var(--line);border-radius:12px;background:var(--card);padding:10px;box-shadow:var(--sh);font-weight:600;font-size:12.5px;cursor:pointer}.cards div:hover{transform:translateY(-2px)}
+body.hv .hero{display:flex}body.hv .feed,body.hv .comp{display:none}
+.box{border:2px solid var(--line);border-radius:12px;background:var(--card);padding:10px;box-shadow:var(--sh)}
+.flow{stroke-dasharray:5 6;animation:fw 1.2s linear infinite}@keyframes fw{to{stroke-dashoffset:-22}}
+.imp{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:3px 0;font-weight:600}.imp span{display:flex;gap:6px;align-items:center}
+.fact{border-left:5px solid var(--c);background:var(--card);border-radius:8px;padding:6px 9px;font-size:12px;border-top:1.5px solid var(--line);border-right:1.5px solid var(--line);border-bottom:1.5px solid var(--line)}.fact b{font:700 10px 'JetBrains Mono';display:block;color:var(--mut)}
+.modal{position:fixed;inset:0;background:rgba(11,10,16,.55);display:none;place-items:center;z-index:9}.modal.on{display:grid}.modal .box{width:420px;padding:20px}
+.cur::after{content:'▋';animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+</style></head><body>
+<div class="app">
+<aside>
+ <div class="brand"><svg><use href="#clover"/></svg><b>KLOBER</b><span class="pill">APP.KLOBER.AI</span></div>
+ <button class="gold" onclick="setView('hero')">+ New Unified Thread <span class="mono" style="font-size:11px">⌘N</span></button>
+ <button class="btn" onclick="setView('thread')">↩ Active Multi-Model Thread</button>
+ <div class="search"><span>Search all models & memory...</span><span class="mono">⌘K</span></div>
+ <div class="nav"><div class="on">Unified Chat</div><div>Memory Vault <span class="mono">1,428</span></div><div>Chat Importer</div><div>Model Router</div></div>
+ <h6>UNIFIED THREADS</h6>
+ <div class="th on"><p>Q4 Launch & Multi-LLM Architecture</p><div class="lg"><svg><use href="#i-claude"/></svg><svg><use href="#i-grok"/></svg><svg><use href="#i-gpt"/></svg> · Active</div></div>
+ <div class="th"><p>Stripe Webhook & Pricing Tier Refactor</p><div class="lg"><svg><use href="#i-claude"/></svg><svg><use href="#i-gpt"/></svg></div></div>
+ <div class="th"><p>Landing Page Storyboard & GTM Copy</p><div class="lg"><svg><use href="#i-gemini"/></svg><svg><use href="#i-claude"/></svg><svg><use href="#i-grok"/></svg></div></div>
+ <div class="th"><p>Imported: 1,739 Chats Unified</p><div class="lg"><svg><use href="#i-gpt"/></svg><svg><use href="#i-claude"/></svg><svg><use href="#i-gemini"/></svg><svg><use href="#i-grok"/></svg> ChatGPT · Claude · Gemini · Grok</div></div>
+ <div class="dock"><h6 style="margin:0 0 4px">CONNECTED ENGINES</h6>
+  <div class="eng"><svg class="ic"><use href="#i-claude"/></svg>Claude 4.6<i class="dotg"></i></div>
+  <div class="eng"><svg class="ic"><use href="#i-gpt"/></svg>ChatGPT 5<i class="dotg"></i></div>
+  <div class="eng"><svg class="ic"><use href="#i-gemini"/></svg>Gemini 2.5 Pro<i class="dotg"></i></div>
+  <div class="eng"><svg class="ic"><use href="#i-grok"/></svg>Grok 4<i class="dotg"></i></div>
+  <div class="prof"><div class="av">B</div><div><b>Bar</b><div style="font-size:11px;color:var(--mut)">Klober Founder</div></div><span class="badge" style="margin-left:auto">PRO</span></div>
+ </div>
+</aside>
+<main>
+ <div class="top"><h1>Q4 Launch & Multi-LLM Architecture</h1>
+  <div class="sw" id="msw"><button data-m="auto" class="on">Auto Router ✦</button><button data-m="Claude"><svg class="ic"><use href="#i-claude"/></svg>Claude</button><button data-m="ChatGPT"><svg class="ic"><use href="#i-gpt"/></svg>ChatGPT</button><button data-m="Gemini"><svg class="ic"><use href="#i-gemini"/></svg>Gemini</button><button data-m="Grok"><svg class="ic"><use href="#i-grok"/></svg>Grok</button></div>
+  <span class="badge">Shared Memory: ON (1,428 nodes)</span>
+  <button class="btn" onclick="modal(1)">⇪ Import History</button>
+  <button class="btn" id="theme-toggle">☀ Paper / ☾ Night</button>
+ </div>
+ <div class="feed" id="feed">
+  <div class="u">Claude — design the unified context router schema so every model reads and writes the same memory.</div>
+  <div class="m"><div class="who"><svg class="ic"><use href="#i-claude"/></svg>Claude 4.6 <span class="pill">ARCHITECTURE</span></div>
+   Three layers: <b>Ingest</b> (normalize chats from any provider) → <b>Memory Graph</b> (dedupe facts into nodes) → <b>Router</b> (inject top-k context per model token budget).
+<pre>interface ContextPacket {
+  threadId: string; model: 'claude'|'gpt'|'gemini'|'grok';
+  memory: MemoryNode[];      // ranked by relevance × recency
+  state: ThreadState;        // full turn history, tools, files
+  budget: { tokens: number; reserveForReply: number };
+}</pre><span class="tag">WRITTEN TO SHARED MEMORY · +6 NODES</span></div>
+  <div class="hand">⚡ INSTANT MODEL SWITCH · CLAUDE → GROK · ZERO CONTEXT LOSS<small>1,428 memory nodes & full thread state injected in 14ms — no copy-pasting</small></div>
+  <div class="u">Grok, based on the exact schema Claude just designed above, write our launch thread and stress-test developer objections.</div>
+  <div class="m"><div class="who"><svg class="ic"><use href="#i-grok"/></svg>Grok 4 <span class="pill">READ: ContextPacket</span></div>
+   🧵 <b>1/</b> You've had the same conversation with 4 AIs. They've never met. Klober fixes that.<br><b>2/</b> One <code>ContextPacket</code>. Every model. Switch Claude → Grok mid-thought; nothing's lost.<br><b>3/</b> Import 1,700 old chats in one ZIP. Your memory finally belongs to you.
+   <table><tr><th>Dev objection</th><th>Answer (from Claude's schema)</th></tr><tr><td>"Token bloat?"</td><td><code>budget.reserveForReply</code> + top-k ranking</td></tr><tr><td>"Vendor lock-in?"</td><td>Provider-agnostic <code>model</code> union</td></tr><tr><td>"Privacy?"</td><td>Vault is user-owned, encrypted per node</td></tr></table></div>
+  <div class="m" style="max-width:100%"><div class="who">✦ Split Synthesis · Cross-Verified Launch Checklist</div>
+   <div class="split"><div><div class="who"><svg class="ic"><use href="#i-gpt"/></svg>ChatGPT 5</div>✓ Pricing page matches Stripe tiers<br>✓ Importer handles 842-chat ZIP<br>⚠ Add rate-limit copy to docs</div>
+   <div><div class="who"><svg class="ic"><use href="#i-gemini"/></svg>Gemini 2.5 Pro</div>✓ Router latency p95 = 14ms<br>✓ Memory dedupe: 0 conflicts<br>⚠ Schedule thread for Tue 9am PT</div></div></div>
+ </div>
+ <div class="hero"><svg class="big"><use href="#clover"/></svg><h2>One Memory. Every Model.</h2>
+  <div class="omni">Ask Claude, ChatGPT, Gemini & Grok — with your whole vault attached…<div class="crow" style="margin-top:12px"><span class="pill">Memory: Full Vault</span><span class="pill">Auto Router ✦</span><button class="send" onclick="setView('thread')">Start ↑</button></div></div>
+  <div class="cards"><div onclick="modal(1)">⇪ Import ChatGPT/Claude ZIP</div><div onclick="go('Cross-model code review of the router')">⌥ Cross-Model Code Review</div><div onclick="go('Brainstorm launch names across all models')">✺ Multi-LLM Brainstorm</div><div>◎ Memory Graph Explorer</div></div></div>
+ <div class="comp"><div class="chips"><span class="chip">Summarize Claude's schema</span><span class="chip">Draft pricing FAQ</span><span class="chip">Compare GPT vs Gemini on launch risks</span></div>
+  <input id="inp" placeholder="Message any model — shared memory attached…">
+  <div class="crow"><span class="badge" id="amb">✦ Auto Router</span><span class="pill">Memory Context: Full Vault</span><span class="pill">Compare 2x</span><button class="send" id="send">Send ↑</button></div></div>
+</main>
+<div class="right">
+ <h6 style="margin:0">KLOBER SHARED MEMORY VAULT</h6>
+ <div class="box" style="padding:4px"><svg viewBox="0 0 280 200" width="100%">
+  <g stroke="#7fd05a" stroke-width="2.5" fill="none"><path class="flow" d="M50 40 Q100 70 140 100"/><path class="flow" d="M230 40 Q180 70 140 100"/><path class="flow" d="M50 160 Q100 130 140 100"/><path class="flow" d="M230 160 Q180 130 140 100"/></g>
+  <circle cx="140" cy="100" r="34" fill="#1c8a4a" opacity=".18"><animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite"/></circle>
+  <use href="#clover" x="112" y="72" width="56" height="56"/>
+  <g font-family="Instrument Sans" font-size="11" font-weight="700" fill="currentColor" style="color:var(--txt)">
+  <circle cx="50" cy="40" r="17" fill="var(--card2)" stroke="var(--line)" stroke-width="2"/><use href="#i-claude" x="40" y="30" width="20" height="20"/><text x="30" y="72">Claude</text>
+  <circle cx="230" cy="40" r="17" fill="var(--card2)" stroke="var(--line)" stroke-width="2"/><use href="#i-gpt" x="220" y="30" width="20" height="20"/><text x="206" y="72">ChatGPT</text>
+  <circle cx="50" cy="160" r="17" fill="var(--card2)" stroke="var(--line)" stroke-width="2"/><use href="#i-gemini" x="40" y="150" width="20" height="20"/><text x="28" y="194">Gemini</text>
+  <circle cx="230" cy="160" r="17" fill="var(--card2)" stroke="var(--line)" stroke-width="2"/><use href="#i-grok" x="220" y="150" width="20" height="20"/><text x="216" y="194">Grok</text></g></svg></div>
+ <h6>1-CLICK CHAT HISTORY IMPORTER</h6>
+ <div class="box"><div class="imp"><span><svg class="ic"><use href="#i-gpt"/></svg>ChatGPT</span><span class="mono">842 chats ✓</span></div><div class="imp"><span><svg class="ic"><use href="#i-claude"/></svg>Claude</span><span class="mono">519 chats ✓</span></div><div class="imp"><span><svg class="ic"><use href="#i-gemini"/></svg>Gemini</span><span class="mono">214 chats ✓</span></div><div class="imp"><span><svg class="ic"><use href="#i-grok"/></svg>Grok</span><span class="mono">164 chats ✓</span></div>
+ <button class="gold" style="width:100%;margin-top:8px;justify-content:center" onclick="modal(1)">+ Import ZIP / Connect Account</button></div>
+ <h6>ACTIVE MEMORY FACTS</h6>
+ <div class="fact" style="--c:#ecb23a"><b>BRAND</b>Klober (klober.ai)</div>
+ <div class="fact" style="--c:#6fbf52"><b>ARCHITECTURE</b>Unified Context Layer · ContextPacket v1</div>
+ <div class="fact" style="--c:#a394ea"><b>LAUNCH TARGET</b>T-14 Days · Tue 9am PT</div>
+ <div class="fact" style="--c:#45b8a7"><b>PRICING</b>Free · Pro $20 · Team $40/seat</div>
+ <div class="fact" style="--c:#ecb23a"><b>VOICE</b>Playful, tactile, founder-direct</div>
+</div></div>
+<div class="modal" id="modal" onclick="if(event.target==this)modal(0)"><div class="box"><div class="disp" style="font-size:30px">Import Your AI History</div><p style="color:var(--mut);margin:6px 0 12px">Drop exports from ChatGPT, Claude, Gemini or Grok. Klober dedupes them into one memory graph.</p>
+ <div style="border:2px dashed var(--line);border-radius:12px;padding:26px;text-align:center;font-weight:600">⇪ Drop .zip here</div><div class="crow" style="margin-top:12px"><button class="btn" onclick="modal(0)">Cancel</button><button class="gold" style="margin-left:auto" onclick="modal(0)">Connect Account</button></div></div></div>
+<script>
+const P=new URLSearchParams(location.search),B=document.body;
+if(P.get('theme')==='dark')B.dataset.theme='dark';if(P.get('view')==='hero')B.classList.add('hv');
+document.getElementById('theme-toggle').onclick=()=>B.dataset.theme=B.dataset.theme==='dark'?'':'dark';
+function setView(v){B.classList.toggle('hv',v==='hero')}function modal(o){document.getElementById('modal').classList.toggle('on',!!o)}
+let cur='Auto Router';const ic={Claude:'i-claude',ChatGPT:'i-gpt',Gemini:'i-gemini',Grok:'i-grok'};
+document.querySelectorAll('#msw button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#msw button').forEach(x=>x.classList.remove('on'));b.classList.add('on');cur=b.dataset.m==='auto'?'Auto Router':b.dataset.m;document.getElementById('amb').innerHTML=ic[cur]?`<svg class="ic" style="width:12px;height:12px;vertical-align:-2px"><use href="#${ic[cur]}"/></svg> ${cur}`:'✦ Auto Router'});
+const feed=document.getElementById('feed');
+function go(t){setView('thread');const u=document.createElement('div');u.className='u';u.textContent=t;feed.append(u);
+ const m=cur==='Auto Router'?['Claude','ChatGPT','Gemini','Grok'][Math.random()*4|0]:cur,d=document.createElement('div');d.className='m';
+ d.innerHTML=`<div class="who"><svg class="ic"><use href="#${ic[m]}"/></svg>${m}${cur==='Auto Router'?' <span class="pill">ROUTED ✦</span>':''}</div><span class="cur"></span>`;feed.append(d);
+ const r=`Pulling 1,428 shared memory nodes and the full thread state (incl. Claude's ContextPacket schema)… Here's my take on "${t}": keep the router provider-agnostic, ship the importer first, and lead launch copy with "one memory, every model."`.split(' ');
+ const s=d.querySelector('.cur');let i=0;const iv=setInterval(()=>{s.textContent+=r[i++]+' ';feed.scrollTop=1e9;if(i>=r.length){clearInterval(iv);s.className='';d.insertAdjacentHTML('beforeend','<br><span class="tag">WRITTEN TO SHARED MEMORY · +2 NODES</span>')}},40);feed.scrollTop=1e9}
+const inp=document.getElementById('inp');document.getElementById('send').onclick=()=>{if(inp.value.trim()){go(inp.value);inp.value=''}};inp.onkeydown=e=>{if(e.key==='Enter')document.getElementById('send').click()};
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>go(c.textContent));
+addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='n'){e.preventDefault();setView('hero')}});
+</script></body></html>

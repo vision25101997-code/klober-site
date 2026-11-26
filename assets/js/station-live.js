@@ -11,7 +11,8 @@ await new Promise((ok) => { const t = setInterval(() => { if (document.querySele
   if (stem >= 0 && crew > stem) {
     kids.slice(stem, crew).forEach((n) => n.classList.add("old-mush"));
     kids.slice(crew).forEach((n) => n.classList.add("old-crew"));
-    const doc = new DOMParser().parseFromString(await (await fetch("assets/icons/station.svg?v=20261122a")).text(), "image/svg+xml");
+    await new Promise((ok) => { let done = false; const go = () => { if (!done) { done = true; ok(); } }; const el = document.getElementById("houses") || document.querySelector(".isles"); if (!el || !("IntersectionObserver" in window)) return go(); const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); go(); } }, { rootMargin: "150px 0px" }); io.observe(el); const later = () => setTimeout(() => { io.disconnect(); go(); }, 1200); if (document.readyState === "complete") later(); else addEventListener("load", later, { once: true }); });
+    const doc = new DOMParser().parseFromString(await (await fetch("assets/icons/station.svg?v=20261126b")).text(), "image/svg+xml");
     isl.insertBefore(document.importNode(doc.documentElement.firstElementChild, true), kids[crew]);
   }
 }
@@ -1035,11 +1036,6 @@ function draw() {
     say(text);
   }
   station(clockT, lastDt);
-  ambience(clockT);
-  grass(clockT);
-  crane(clockT + 0.0);
-  gauges(still.matches ? 0 : lastDt, top);
-  pneumatic(clockT);
 }
 function tick(now) {
   const dt = last ? Math.min((now - last) / 1000, 1 / 30) : 1 / 60;
@@ -1050,7 +1046,8 @@ function tick(now) {
   draw();
   frame = visible ? requestAnimationFrame(tick) : 0;
 }
-const run = () => { if (!frame && visible) { last = 0; frame = requestAnimationFrame(tick); } };
+const PHONE = matchMedia("(max-width:760px)").matches; // phones: the station stands still
+const run = () => { if (PHONE) return; if (!frame && visible) { last = 0; frame = requestAnimationFrame(tick); } };
 new IntersectionObserver((e) => { visible = e[e.length - 1].isIntersecting; if (visible) run(); }, { rootMargin: "120px 0px" }).observe(stage);
 stage.addEventListener("pointermove", (event) => { const b = svg.getBoundingClientRect(); const f = (event.clientX - b.left) / b.width; target = 0.05 + Math.max(0, Math.min(1, f)) * 0.5; });
 stage.addEventListener("pointerleave", () => { target = 0.11; });

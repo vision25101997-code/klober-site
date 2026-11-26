@@ -1,5 +1,5 @@
 // The shared sand-glass: puts the anatomy hourglass on the third island and runs it.
-const HG_V = "20261126a";
+const HG_V = "20261126b";
 await new Promise((ok) => { const t = setInterval(() => { if (document.querySelector('#islands .isl[data-isl="2"] .isl-in')) { clearInterval(t); ok(); } }, 150); });
 {
   const css = document.createElement("style");
@@ -9,7 +9,8 @@ await new Promise((ok) => { const t = setInterval(() => { if (document.querySele
   const kids = [...isl.children];
   const from = kids.findIndex((n) => (n.getAttribute("d") || "").startsWith("M86 330V300"));
   if (from >= 0) {
-    kids.slice(from).forEach((n) => { if (!(n.classList && (n.classList.contains("falls") || n.classList.contains("wheel")))) n.classList.add("hg-old"); });
+    kids.slice(from).forEach((n) => n.classList.add("hg-old"));
+    await new Promise((ok) => { let done = false; const go = () => { if (!done) { done = true; ok(); } }; const el = document.getElementById("houses") || document.querySelector(".isles"); if (!el || !("IntersectionObserver" in window)) return go(); const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); go(); } }, { rootMargin: "150px 0px" }); io.observe(el); const later = () => setTimeout(() => { io.disconnect(); go(); }, 1200); if (document.readyState === "complete") later(); else addEventListener("load", later, { once: true }); });
     const doc = new DOMParser().parseFromString(await (await fetch("assets/icons/hourglass.svg?v=" + HG_V)).text(), "image/svg+xml");
     isl.insertBefore(document.importNode(doc.documentElement.firstElementChild, true), kids[from]);
   }
@@ -2205,7 +2206,7 @@ hit.addEventListener("pointerleave", () => { want = 1; });
 hit.addEventListener("click", () => flip());
 hit.addEventListener("keydown", (e) => { if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); } });
 window.__hg = { step: (t) => { for (let i = 0; i < Math.round(t / 0.02); i++) step(0.02); draw(); }, flip, hold: () => { onScreen = false; } };
-if (hgStill) { H.drain(M, H.TOTAL * 0.38); draw(); }
+if (hgStill || matchMedia("(max-width:760px)").matches) { H.drain(M, H.TOTAL * 0.38); draw(); }
 else {
   draw();
   if ("IntersectionObserver" in window) new IntersectionObserver((es) => { const was = onScreen; onScreen = es[0].isIntersecting; if (onScreen && !was) requestAnimationFrame(frame); }, { rootMargin: "100px" }).observe(hit);

@@ -72,3 +72,6 @@ body.pricing-page{background:radial-gradient(circle,rgba(27,24,48,.13) 1px,trans
 }
 body.docs-page{background:radial-gradient(circle,rgba(27,24,48,.13) 1px,transparent 1.4px) 0 0/26px 26px,var(--paper)}
 body.security-page{background:radial-gradient(circle,rgba(27,24,48,.13) 1px,transparent 1.4px) 0 0/26px 26px,var(--paper)}
+body.legal-page{background:radial-gradient(circle,rgba(27,24,48,.13) 1px,transparent 1.4px) 0 0/26px 26px,var(--paper)}
+body{background:radial-gradient(circle,rgba(27,24,48,.13) 1px,transparent 1.4px) 0 0/26px 26px,var(--paper)}
+.page .art-link{display:block;color:inherit;text-decoration:none}
